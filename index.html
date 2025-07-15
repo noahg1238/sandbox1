@@ -4,7 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="arrays.js"></script>
+    <script>
+        let students = new Array('Aaron', 'Edwin', 'Steve', 'Nancy');
+        Array.prototype.displayItems = function() {
+            for(let i=0; i<this.length; i++){
+                document.writeln(this[i])
+            }
+        }
+        
+        document.writeln(`student array, ${students.length}<br>`);
+        
+        const colors = ['red', 'yellow', 'blue'];
+        colors[5] = 'purple';
+        console.log(colors, colors[4]) // colors[4] undefined
+        const iterator = colors.keys();
+        console.log(iterator);
+        for (let key of iterator) {
+            console.log(`${key}: ${colors[key]}`)
+        }
+        
+        
+        const newColors = colors.toReversed();
+        
+        console.log(newColors)
+        
+        students.displayItems();
+    </script>
 </head>
 <body>
     
