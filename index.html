@@ -8,11 +8,15 @@
         let students = new Array('Aaron', 'Edwin', 'Steve', 'Nancy');
         Array.prototype.displayItems = function() {
             for(let i=0; i<this.length; i++){
-                document.writeln(this[i])
+                document.writeln(`${this[i]}<br>`)
             }
         }
         
         document.writeln(`student array, ${students.length}<br>`);
+        students.displayItems();
+        students.reverse();
+        students.displayItems();
+        
         
         const colors = ['red', 'yellow', 'blue'];
         colors[5] = 'purple';
@@ -28,7 +32,6 @@
         
         console.log(newColors)
         
-        students.displayItems();
     </script>
 </head>
 <body>
